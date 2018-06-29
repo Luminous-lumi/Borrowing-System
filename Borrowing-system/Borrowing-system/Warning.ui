@@ -1,45 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AddDlg</class>
- <widget class="QDialog" name="AddDlg">
+ <class>Warning</class>
+ <widget class="QDialog" name="Warning">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
     <width>588</width>
-    <height>219</height>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>AddDlg</string>
+   <string>Warning</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>-20</y>
-     <width>561</width>
-     <height>251</height>
+     <x>110</x>
+     <y>130</y>
+     <width>441</width>
+     <height>24</height>
     </rect>
    </property>
    <property name="text">
-    <string>用户名或密码错误，请重新输入。</string>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
+    <string>用户名或密码错误！请重新输入。</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Warning_OK">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>170</y>
+     <x>210</x>
+     <y>230</y>
      <width>150</width>
      <height>46</height>
     </rect>
    </property>
    <property name="text">
-    <string>OK！</string>
+    <string>OK</string>
    </property>
   </widget>
  </widget>
@@ -47,18 +44,18 @@
  <resources/>
  <connections>
   <connection>
-   <sender>Warning_OK</sender>
+   <sender>pushButton</sender>
    <signal>clicked()</signal>
-   <receiver>AddDlg</receiver>
+   <receiver>Warning</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>519</x>
-     <y>179</y>
+     <x>397</x>
+     <y>251</y>
     </hint>
     <hint type="destinationlabel">
-     <x>19</x>
-     <y>151</y>
+     <x>555</x>
+     <y>263</y>
     </hint>
    </hints>
   </connection>

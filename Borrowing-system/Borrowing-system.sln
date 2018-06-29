@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "borrow system_qt", "borrow system_qt\borrow system_qt.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Borrowing-system", "Borrowing-system\Borrowing-system.vcxproj", "{B12702AD-ABFB-343A-A199-8E24837244A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FA8C11C0-A4B8-4EDD-BC02-A5FBCB8387FA}
+		SolutionGuid = {874F73FF-8054-40FE-90DA-0CEF484EBE86}
 	EndGlobalSection
 EndGlobal

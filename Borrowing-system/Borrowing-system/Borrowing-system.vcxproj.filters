@@ -2,13 +2,13 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="borrowsystem_qt.cpp">
+    <ClCompile Include="Borrowingsystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LoginDlg.cpp">
+    <ClCompile Include="Login.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AddDlg.cpp">
+    <ClCompile Include="Warning.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -35,30 +35,35 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="borrowsystem_qt.h">
+    <QtMoc Include="Borrowingsystem.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="LoginDlg.h">
+    <QtMoc Include="Login.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="AddDlg.h">
+    <QtMoc Include="Warning.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="borrowsystem_qt.ui">
+    <QtUic Include="Borrowingsystem.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="LoginDlg.ui">
+    <QtUic Include="Login.ui">
       <Filter>Form Files</Filter>
     </QtUic>
-    <QtUic Include="AddDlg.ui">
+    <QtUic Include="Warning.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="borrowsystem_qt.qrc">
+    <QtRcc Include="Borrowingsystem.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="database.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
