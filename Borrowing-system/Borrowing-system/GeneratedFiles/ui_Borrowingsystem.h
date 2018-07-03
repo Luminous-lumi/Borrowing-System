@@ -70,7 +70,7 @@ public:
     {
         if (BorrowingsystemClass->objectName().isEmpty())
             BorrowingsystemClass->setObjectName(QStringLiteral("BorrowingsystemClass"));
-        BorrowingsystemClass->resize(2017, 1480);
+        BorrowingsystemClass->resize(1597, 1517);
         centralWidget = new QWidget(BorrowingsystemClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -204,7 +204,7 @@ public:
         BorrowingsystemClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(BorrowingsystemClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 2017, 37));
+        menuBar->setGeometry(QRect(0, 0, 1597, 37));
         BorrowingsystemClass->setMenuBar(menuBar);
         mainToolBar = new QToolBar(BorrowingsystemClass);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -217,6 +217,10 @@ public:
         QObject::connect(radioButton_book, SIGNAL(toggled(bool)), BorrowingsystemClass, SLOT(click_book()));
         QObject::connect(radioButton_video, SIGNAL(toggled(bool)), BorrowingsystemClass, SLOT(click_video()));
         QObject::connect(radioButton_picture, SIGNAL(toggled(bool)), BorrowingsystemClass, SLOT(click_picture()));
+        QObject::connect(Additem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_additem()));
+        QObject::connect(deleteitem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_deleteitem()));
+        QObject::connect(edititem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_edititem()));
+        QObject::connect(saveitem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_saveitem()));
 
         QMetaObject::connectSlotsByName(BorrowingsystemClass);
     } // setupUi

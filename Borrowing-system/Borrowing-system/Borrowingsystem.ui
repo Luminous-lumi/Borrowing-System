@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>2017</width>
-    <height>1480</height>
+    <width>1597</width>
+    <height>1517</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -234,7 +234,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>2017</width>
+     <width>1597</width>
      <height>37</height>
     </rect>
    </property>
@@ -261,8 +261,8 @@
    <slot>click_book()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>279</x>
-     <y>587</y>
+     <x>319</x>
+     <y>235</y>
     </hint>
     <hint type="destinationlabel">
      <x>39</x>
@@ -277,8 +277,8 @@
    <slot>click_video()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>633</x>
-     <y>595</y>
+     <x>866</x>
+     <y>235</y>
     </hint>
     <hint type="destinationlabel">
      <x>526</x>
@@ -293,12 +293,76 @@
    <slot>click_picture()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1075</x>
-     <y>586</y>
+     <x>1366</x>
+     <y>235</y>
     </hint>
     <hint type="destinationlabel">
      <x>1036</x>
      <y>563</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Additem</sender>
+   <signal>clicked()</signal>
+   <receiver>BorrowingsystemClass</receiver>
+   <slot>click_additem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1473</x>
+     <y>324</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>753</x>
+     <y>1436</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>deleteitem</sender>
+   <signal>clicked()</signal>
+   <receiver>BorrowingsystemClass</receiver>
+   <slot>click_deleteitem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1533</x>
+     <y>405</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>800</x>
+     <y>1441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>edititem</sender>
+   <signal>clicked()</signal>
+   <receiver>BorrowingsystemClass</receiver>
+   <slot>click_edititem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1440</x>
+     <y>498</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>841</x>
+     <y>1480</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>saveitem</sender>
+   <signal>clicked()</signal>
+   <receiver>BorrowingsystemClass</receiver>
+   <slot>click_saveitem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1400</x>
+     <y>644</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>940</x>
+     <y>1472</y>
     </hint>
    </hints>
   </connection>
@@ -311,5 +375,6 @@
   <slot>click_book()</slot>
   <slot>click_video()</slot>
   <slot>click_picture()</slot>
+  <slot>click_saveitem()</slot>
  </slots>
 </ui>

@@ -2,15 +2,16 @@
 class database
 {
 public:
+	database() {};
 	database(char* title, char* num, char* author, char* level)
 	{
 		this->title = title; this->author = author; this->num = num; this->level = level;
 	}
 	~database(){}
-	char* title;
-	char* author;
-	char* num;
-	char* level;
+	char* title=new char;
+	char* author=new char;
+	char* num= new char;
+	char* level= new char;
 };
 class book :public database
 {
@@ -21,13 +22,13 @@ public:
 		this->ISBN = ISBN;
 		this->page = page;
 	}
-
+	book() {}
 	~book()
 	{
 	}
-	char* publisher;
-	char* ISBN;
-	char* page;
+	char* publisher= new char;
+	char* ISBN= new char;
+	char* page= new char;
 private:
 
 };
@@ -40,13 +41,13 @@ public:
 		this->pyear = pyear;
 		this->time = time;
 	}
-
+	video(){}
 	~video()
 	{
 	}
-	char* pname;
-	char* pyear;
-	char* time;
+	char* pname= new char;
+	char* pyear= new char;
+	char* time= new char;
 private:
 
 };
@@ -59,13 +60,13 @@ public:
 		this->length = length;
 		this->width = width;
 	}
-
+	picture(){}
 	~picture()
 	{
 	}
-	char* country;
-	char* length;
-	char* width;
+	char* country= new char;
+	char* length= new char;
+	char* width= new char;
 private:
 
 };
