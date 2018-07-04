@@ -3,7 +3,7 @@
 #include<Login.h>
 #include<qmessagebox.h>
 #include<database.h>
-int Borrowingsystem::rrow = 10;
+int Borrowingsystem::rrow = 1;
 int main(int argc, char *argv[])
 {
 	QApplication a(argc, argv);

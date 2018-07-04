@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1597</width>
-    <height>1517</height>
+    <height>1612</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -199,26 +199,6 @@
              </property>
             </spacer>
            </item>
-           <item>
-            <widget class="QPushButton" name="searchitem_2">
-             <property name="text">
-              <string>读取</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <spacer name="verticalSpacer">
-             <property name="orientation">
-              <enum>Qt::Vertical</enum>
-             </property>
-             <property name="sizeHint" stdset="0">
-              <size>
-               <width>20</width>
-               <height>40</height>
-              </size>
-             </property>
-            </spacer>
-           </item>
           </layout>
          </widget>
         </widget>
@@ -262,7 +242,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>319</x>
-     <y>235</y>
+     <y>236</y>
     </hint>
     <hint type="destinationlabel">
      <x>39</x>
@@ -278,7 +258,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>866</x>
-     <y>235</y>
+     <y>236</y>
     </hint>
     <hint type="destinationlabel">
      <x>526</x>
@@ -294,7 +274,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>1366</x>
-     <y>235</y>
+     <y>236</y>
     </hint>
     <hint type="destinationlabel">
      <x>1036</x>
@@ -310,7 +290,7 @@
    <hints>
     <hint type="sourcelabel">
      <x>1473</x>
-     <y>324</y>
+     <y>337</y>
     </hint>
     <hint type="destinationlabel">
      <x>753</x>
@@ -325,8 +305,8 @@
    <slot>click_deleteitem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1533</x>
-     <y>405</y>
+     <x>1560</x>
+     <y>454</y>
     </hint>
     <hint type="destinationlabel">
      <x>800</x>
@@ -341,8 +321,8 @@
    <slot>click_edititem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1440</x>
-     <y>498</y>
+     <x>1560</x>
+     <y>545</y>
     </hint>
     <hint type="destinationlabel">
      <x>841</x>
@@ -357,12 +337,28 @@
    <slot>click_saveitem()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1400</x>
-     <y>644</y>
+     <x>1560</x>
+     <y>728</y>
     </hint>
     <hint type="destinationlabel">
      <x>940</x>
      <y>1472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>searchitem</sender>
+   <signal>clicked()</signal>
+   <receiver>BorrowingsystemClass</receiver>
+   <slot>click_searchitem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1439</x>
+     <y>632</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1086</x>
+     <y>1571</y>
     </hint>
    </hints>
   </connection>

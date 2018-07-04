@@ -3,11 +3,13 @@
 #include<database.h>
 #include<fstream>
 #include<iostream>
-#include<qkeyeventtransition.h>
+#include<qtextcodec.h>
 using namespace std;
 book qbook[100];
 video qvideo[100];
 picture qpicture[100];
+
+QTextCodec *codec = QTextCodec::codecForName("UTF-8");
 Borrowingsystem::Borrowingsystem(QWidget *parent)
 	: QMainWindow(parent)
 {
@@ -74,7 +76,138 @@ void Borrowingsystem::click_edititem()
 //查询
 void Borrowingsystem::click_searchitem()
 {
-	
+	int t1_row = ui.tableWidget->rowCount();
+	int t1_col = ui.tableWidget->columnCount();
+	QString s[7];
+	if (ui.tableWidget_2->item(0, 0) != NULL)
+	{
+		QString temp = ui.tableWidget_2->item(0, 0)->text();//存储表2查询信息
+		int temp_row=1;
+		ui.tableWidget_2->clearContents();
+		for (int i = 0; i < t1_row; i++)//检索有无查询项
+		{
+			if (temp == ui.tableWidget->item(i, 0)->text())
+			{
+				for (int j = 0; j < 7; j++)
+				{
+					s[j] = ui.tableWidget->item(i, j)->text();
+					ui.tableWidget_2->setItem(temp_row - 1, j, new QTableWidgetItem(s[j]));
+				}
+				ui.tableWidget_2->setRowCount(++temp_row);
+				break;
+			}
+		}
+		
+	}
+	else
+		if (ui.tableWidget_2->item(0, 1) != NULL)
+		{
+			QString temp = ui.tableWidget_2->item(0, 1)->text();//存储表2查询信息
+			int temp_row = 1;
+			ui.tableWidget_2->clearContents();
+			for (int i = 0; i < t1_row; i++)//检索有无查询项
+			{
+				if (temp == ui.tableWidget->item(i, 1)->text())
+					for (int j = 0; j < 7; j++)
+					{
+						s[j] = ui.tableWidget->item(i, j)->text();
+						ui.tableWidget_2->setItem(temp_row - 1, j, new QTableWidgetItem(s[j]));
+						ui.tableWidget_2->setRowCount(++temp_row);
+					}
+			}
+
+		}
+		else 
+			if (ui.tableWidget_2->item(0, 2) != NULL)
+		{
+			QString temp = ui.tableWidget_2->item(0, 2)->text();//存储表2查询信息
+			int temp_row = 1;
+			ui.tableWidget_2->clearContents();
+			for (int i = 0; i < t1_row; i++)//检索有无查询项
+			{
+				if (temp == ui.tableWidget->item(i, 2)->text())
+					for (int j = 0; j < 7; j++)
+					{
+						s[j] = ui.tableWidget->item(i, j)->text();
+						ui.tableWidget_2->setItem(temp_row - 1, j, new QTableWidgetItem(s[j]));
+						ui.tableWidget_2->setRowCount(++temp_row);
+					}
+			}
+
+		}
+			else 
+				if (ui.tableWidget_2->item(0, 3) != NULL)
+				{
+					QString temp = ui.tableWidget_2->item(0, 3)->text();//存储表2查询信息
+					int temp_row = 1;
+					ui.tableWidget_2->clearContents();
+					for (int i = 0; i < t1_row; i++)//检索有无查询项
+					{
+						if (temp == ui.tableWidget->item(i, 3)->text())
+							for (int j = 0; j < 7; j++)
+							{
+								s[j] = ui.tableWidget->item(i, j)->text();
+								ui.tableWidget_2->setItem(temp_row - 1, j, new QTableWidgetItem(s[j]));
+								ui.tableWidget_2->setRowCount(++temp_row);
+							}
+					}
+
+				}
+				else
+					if (ui.tableWidget_2->item(0, 4) != NULL)
+					{
+						QString temp = ui.tableWidget_2->item(0, 4)->text();//存储表2查询信息
+						int temp_row = 1;
+						ui.tableWidget_2->clearContents();
+						for (int i = 0; i < t1_row; i++)//检索有无查询项
+						{
+							if (temp == ui.tableWidget->item(i, 4)->text())
+								for (int j = 0; j < 7; j++)
+								{
+									s[j] = ui.tableWidget->item(i, j)->text();
+									ui.tableWidget_2->setItem(temp_row - 1, j, new QTableWidgetItem(s[j]));
+									ui.tableWidget_2->setRowCount(++temp_row);
+								}
+						}
+
+					}
+					else
+						if (ui.tableWidget_2->item(0, 5) != NULL)
+						{
+							QString temp = ui.tableWidget_2->item(0, 5)->text();//存储表2查询信息
+							int temp_row = 1;
+							ui.tableWidget_2->clearContents();
+							for (int i = 0; i < t1_row; i++)//检索有无查询项
+							{
+								if (temp == ui.tableWidget->item(i, 5)->text())
+									for (int j = 0; j < 7; j++)
+									{
+										s[j] = ui.tableWidget->item(i, j)->text();
+										ui.tableWidget_2->setItem(temp_row - 1, j, new QTableWidgetItem(s[j]));
+										ui.tableWidget_2->setRowCount(++temp_row);
+									}
+							}
+
+						}
+						else
+							if (ui.tableWidget_2->item(0, 6) != NULL)
+							{
+								QString temp = ui.tableWidget_2->item(0, 6)->text();//存储表2查询信息
+								int temp_row = 1;
+								ui.tableWidget_2->clearContents();
+								for (int i = 0; i < t1_row; i++)//检索有无查询项
+								{
+									if (temp == ui.tableWidget->item(i, 6)->text())
+										for (int j = 0; j < 7; j++)
+										{
+											s[j] = ui.tableWidget->item(i, j)->text();
+											ui.tableWidget_2->setItem(temp_row - 1, j, new QTableWidgetItem(s[j]));
+											ui.tableWidget_2->setRowCount(++temp_row);
+										}
+								}
+
+							}
+							
 }
 
 //存盘
@@ -103,13 +236,22 @@ void Borrowingsystem::click_saveitem()
 				qISBN = ui.tableWidget->item(i, 5)->text();
 				qpage = ui.tableWidget->item(i, 6)->text();
 				out << qnum.toStdString().c_str() << endl << qtitle.toStdString().c_str() << endl << qauthor.toStdString().c_str() <<endl << qlevel.toStdString().c_str()
-					<< endl << qpublisher.toStdString().c_str() << endl << qISBN.toStdString().c_str() << endl << qpage.toStdString().c_str() << endl;
+					<< endl << qpublisher.toStdString().c_str() << endl << qISBN.toStdString().c_str() << endl << qpage.toStdString().c_str();
+				out.close();
+				
+				/*out.write(qnum.toStdString().c_str(), 8 * sizeof(char));
+				out.write(qtitle.toStdString().c_str(), 8 * sizeof(char));
+				out.write(qauthor.toStdString().c_str(), 8 * sizeof(char));
+				out.write(qlevel.toStdString().c_str(), 8 * sizeof(char));
+				out.write(qpublisher.toStdString().c_str(), 8 * sizeof(char));
+				out.write(qISBN.toStdString().c_str(), 8 * sizeof(char));
+				out.write(qpage.toStdString().c_str(), 8 * sizeof(char));*/
 			}
 			break;
 		}
 	case 1://视频
 	{
-		out.open("video.txt");
+		out.open("video.txt", ios::trunc);
 		if (!out)
 		{
 			return;
@@ -123,14 +265,15 @@ void Borrowingsystem::click_saveitem()
 			qpname = ui.tableWidget->item(i, 4)->text();
 			qpyear = ui.tableWidget->item(i, 5)->text();
 			qtime = ui.tableWidget->item(i, 6)->text();
-			out << qnum.toStdString().c_str() << qtitle.toStdString().c_str() << qauthor.toStdString().c_str() << qlevel.toStdString().c_str()
-				<< qpname.toStdString().c_str() << qpyear.toStdString().c_str() << qtime.toStdString().c_str();
+			out << endl;
+			out << qnum.toStdString().c_str() <<endl<< qtitle.toStdString().c_str()<<endl << qauthor.toStdString().c_str() << endl << qlevel.toStdString().c_str()
+				<< endl << qpname.toStdString().c_str() << endl << qpyear.toStdString().c_str() << endl << qtime.toStdString().c_str();
 		}
 		break;
 	}
 	case 2://图片
 	{
-		out.open("picture.txt");
+		out.open("picture.txt", ios::trunc);
 		if (!out)
 		{
 			return;
@@ -144,8 +287,8 @@ void Borrowingsystem::click_saveitem()
 			qcountry = ui.tableWidget->item(i, 4)->text();
 			qlength = ui.tableWidget->item(i, 5)->text();
 			qwidth = ui.tableWidget->item(i, 6)->text();
-			out << qnum.toStdString().c_str() << qtitle.toStdString().c_str() << qauthor.toStdString().c_str() << qlevel.toStdString().c_str()
-				<< qcountry.toStdString().c_str() << qlength.toStdString().c_str() << qwidth.toStdString().c_str();
+			out <<endl<< qnum.toStdString().c_str() << endl << qtitle.toStdString().c_str() << endl << qauthor.toStdString().c_str() << endl << qlevel.toStdString().c_str()
+				<< endl << qcountry.toStdString().c_str() << endl << qlength.toStdString().c_str() << endl << qwidth.toStdString().c_str();
 		}
 		break;
 	}
@@ -158,6 +301,7 @@ void Borrowingsystem::click_saveitem()
 void Borrowingsystem::click_book()
 {
 	ui.tableWidget->clearContents();
+	ui.tableWidget_2->clearContents();
 	QStringList header;
 	header << u8"编号" << u8"标题" << u8"作者" << u8"评级" << u8"出版社" << u8"ISBN" << u8"页数";
 	ui.tableWidget->setHorizontalHeaderLabels(header);
@@ -168,6 +312,7 @@ void Borrowingsystem::click_book()
 		cerr << "找不到源文件" << endl;
 		return;
 	}
+	in.seekg(0);
 	while (!in.eof())
 	{
 		int i = 0;
@@ -190,6 +335,7 @@ void Borrowingsystem::click_book()
 void Borrowingsystem::click_video()
 {
 	ui.tableWidget->clearContents();
+	ui.tableWidget_2->clearContents();
 	QStringList header;
 	header << u8"编号" <<u8"标题" << u8"作者" << u8"评级" << u8"出品者姓名" << u8"出品年份" << u8"视频时长";
 	ui.tableWidget->setHorizontalHeaderLabels(header);
@@ -200,6 +346,7 @@ void Borrowingsystem::click_video()
 		cerr << "找不到源文件" << endl;
 		return;
 	}
+	in.seekg(0);
 	while (!in.eof())
 	{
 		int i = 0;
@@ -222,6 +369,7 @@ void Borrowingsystem::click_video()
 void Borrowingsystem::click_picture()
 {
 	ui.tableWidget->clearContents();
+	ui.tableWidget_2->clearContents();
 	QStringList header;
 	header << u8"编号" << u8"标题" << u8"作者" << u8"评级" << u8"出品国籍" << u8"长" << u8"宽";
 	ui.tableWidget->setHorizontalHeaderLabels(header);
@@ -232,6 +380,7 @@ void Borrowingsystem::click_picture()
 		cerr << "找不到源文件" << endl;
 		return;
 	}
+	in.seekg(0);
 	while (!in.eof())
 	{
 		int i = 0;

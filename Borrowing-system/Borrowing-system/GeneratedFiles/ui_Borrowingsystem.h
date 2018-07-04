@@ -59,8 +59,6 @@ public:
     QSpacerItem *verticalSpacer_2;
     QPushButton *saveitem;
     QSpacerItem *verticalSpacer_6;
-    QPushButton *searchitem_2;
-    QSpacerItem *verticalSpacer;
     QTableWidget *tableWidget;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
@@ -70,7 +68,7 @@ public:
     {
         if (BorrowingsystemClass->objectName().isEmpty())
             BorrowingsystemClass->setObjectName(QStringLiteral("BorrowingsystemClass"));
-        BorrowingsystemClass->resize(1597, 1517);
+        BorrowingsystemClass->resize(1597, 1612);
         centralWidget = new QWidget(BorrowingsystemClass);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -182,15 +180,6 @@ public:
 
         verticalLayout->addItem(verticalSpacer_6);
 
-        searchitem_2 = new QPushButton(widget);
-        searchitem_2->setObjectName(QStringLiteral("searchitem_2"));
-
-        verticalLayout->addWidget(searchitem_2);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
         splitter->addWidget(widget);
         splitter_2->addWidget(splitter);
         tableWidget = new QTableWidget(splitter_2);
@@ -221,6 +210,7 @@ public:
         QObject::connect(deleteitem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_deleteitem()));
         QObject::connect(edititem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_edititem()));
         QObject::connect(saveitem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_saveitem()));
+        QObject::connect(searchitem, SIGNAL(clicked()), BorrowingsystemClass, SLOT(click_searchitem()));
 
         QMetaObject::connectSlotsByName(BorrowingsystemClass);
     } // setupUi
@@ -237,7 +227,6 @@ public:
         edititem->setText(QApplication::translate("BorrowingsystemClass", "\344\277\256\346\224\271", Q_NULLPTR));
         searchitem->setText(QApplication::translate("BorrowingsystemClass", "\346\237\245\350\257\242", Q_NULLPTR));
         saveitem->setText(QApplication::translate("BorrowingsystemClass", "\345\255\230\347\233\230", Q_NULLPTR));
-        searchitem_2->setText(QApplication::translate("BorrowingsystemClass", "\350\257\273\345\217\226", Q_NULLPTR));
     } // retranslateUi
 
 };
